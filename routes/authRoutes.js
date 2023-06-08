@@ -18,52 +18,6 @@ const limiter = rateLimit({
 const router = express.Router();
 
 //routes
-/**
- * @swagger
- * components:
- *   schemas:
- *   User:
- *   type:Object
- *   required:
- *       - name
- *       - lastName
- *       - email
- *       - password
- *       - location
- *    properties:
- *      id:
- *        type:string
- *        description:The Auto-generated id of user collection
- *      name:
- *        type:string
- *        description:User name
- *      lastName:
- *        type:string
- *        description:User last name
- *      email:
- *        type:string
- *        description:User email address
- *      password:
- *        type:string
- *        description:User password should be greater than 6 character
- *      location:
- *        type:string
- *        description:User location city or country
- *      example:
- *      id:OIJAOFDJOALSDJL
- *      name:John
- *      lastname:Doe
- *      email:johndoe@gmail.com
- *      password:test@123
- *      location:mumbai
- */
-
-/**
- * @swagger
- * tags:
- *   name:auth
- *   description:authentication apis
- */
 
 //register
 router.post("/register", limiter, registerController);
